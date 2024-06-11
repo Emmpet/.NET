@@ -1,0 +1,32 @@
+﻿@model LocalStore.Models.AdminModel
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/MinStil.css" />
+</head>
+<body>
+    <h1>Intermezzo</h1>
+    
+    <form asp-action="Index" asp-route-returnurl="@ViewData["ReturnUrl"]">
+
+        <table>
+            <tr>
+                <td>Användarnamn</td>
+                <td>@Html.EditorFor(m => m.Username)</td>
+            </tr>
+
+            <tr>
+                <td>Lösenord</td>
+                <td>@Html.PasswordFor(m => m.Password)</td>
+            </tr>
+
+            <tr>
+                <td colspan="2"> <input type="submit" value="Logga in" /> </td>
+            </tr>
+        </table>
+    </form>
+     <p>@ViewBag.ErrorMessage</p>
+     <p> <a asp-action="SignOutUser">Logga ut</a> </p>
+    
+</body>
+</html>

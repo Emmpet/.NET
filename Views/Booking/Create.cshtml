@@ -1,0 +1,36 @@
+﻿@model LocalStore.Models.BookingModel
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Lägg till vecka</h1>
+        <form asp-action="Create">
+            <div>
+                Måndag: <input asp-for="Måndag" />
+            </div>
+
+            <div>
+                Tisdag: <input asp-for="Tisdag" />
+            </div>
+
+            <div>
+                Onsdag: <input asp-for="Onsdag" />
+            </div>
+
+            <div>
+                Torsdag: <input asp-for="Torsdag" />
+            </div>
+
+            <div>
+                Fredag: <input asp-for="Fredag" />
+            </div>
+
+            <div>
+                <input type="submit" value="Lägg till" />
+            </div>
+        </form>
+
+    </body>
+</html>

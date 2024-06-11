@@ -1,0 +1,41 @@
+﻿<!--Lägg till all data från en lista i en model-->
+@model List<LocalStore.Models.BookingModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/MinStil.css" />
+</head>
+<body>
+    <h1>Intermezzo</h1>
+    <h1>Här ser du lediga tider</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Måndag</td>
+                <td>Tisdag</td>
+                <td>Onsdag</td>
+                <td>Torsdag</td>
+                <td>Fredag</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Lista data med loop-->
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Måndag)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Tisdag)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Onsdag)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Torsdag)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Fredag)</td>
+                </tr>
+                
+            }
+    
+        </tbody>
+    </table>
+    <!--Länk till view "create"-->
+    <p><a asp-action="Create">Lägg till ny vecka</a></p>
+</body>
+</html>
